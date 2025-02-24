@@ -6,8 +6,8 @@
 
 public class MGaris {
     public static void main(String[] args){
-        Titik T1 = new Titik(2, 3); // membuat objek titik T1 (2,2)
-        Titik T2 = new Titik(5, 7); // membuat objek titik T1 (2,1)
+        Titik T1 = new Titik(10, -1); // membuat objek titik T1 (2,2)
+        Titik T2 = new Titik(6, 2); // membuat objek titik T1 (2,1)
         
         Garis G1 = new Garis(T1, T2); // membuat objek garis G1 dengan titik T1 dan T2
         G1.printGaris();
