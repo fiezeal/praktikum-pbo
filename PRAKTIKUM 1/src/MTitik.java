@@ -30,14 +30,13 @@ public class MTitik {
 
         // Titik T3 = new Titik(); // membuat objek titik T3 (0,0)
         Titik T4 = new Titik(3,5); // membuat objek titik T4 (3,5)
-        Titik T5 = new Titik(-4, 5);
+        Titik T5 = new Titik(-4, 5); // membuat objek titik T4 (-4,5)
         Titik T6 = T2.getRefleksiY();
 
         System.out.println("Jumlah objek Titik = " + Titik.getCounterTitik());
-        // System.out.println("Jumlah objek Titik = " + T4.getCounterTitik());
+        System.out.println("Jumlah objek Titik = " + T4.getCounterTitik());
 
         System.out.println("Nilai Kuadran T4 = " + "" + T4.getKuadran());
-        // System.out.println("Titik awal garis1: " + garis1);
         System.out.println("T6 berada di kuadran = " + T5.getKuadran());
         System.out.println("Jarak ke Titik Pusat = " + T5.getJarakPusat());
         T6.printTitik();
