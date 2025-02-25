@@ -46,7 +46,7 @@ public class Titik {
         return ordinat;
     }
 
-    // mengembalikan nlai counterTitik
+    // mengembalikan nilai counterTitik
     static int getCounterTitik(){
         return counterTitik;
     }

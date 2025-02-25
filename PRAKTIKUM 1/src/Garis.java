@@ -12,9 +12,10 @@ public class Garis{
 
     // METHOD
     // konstruktor
+    // membuat garis
     Garis(){
-        this.titikAwal = new Titik(0.0, 0.0);
-        this.titikAkhir = new Titik(1.0, 1.0);
+        titikAwal = new Titik(0.0, 0.0);
+        titikAkhir = new Titik(1.0, 1.0);
         counterGaris++;
     }
 
@@ -25,23 +26,28 @@ public class Garis{
     }
 
     // selektor
+    // mengembalikan nilai titik awal
     Titik getTitikAwal(){
         return titikAwal;
     }
 
+    // mengembalikan nilai titik akhir 
     Titik getTitikAkhir(){
         return titikAkhir;
     }
 
     // mutator
+    // mengeset titik awal
     void setTitikAwal(Titik titikAwal){
         this.titikAwal = titikAwal;
     }
 
+    // mengeset titik akhir
     void setTitikAkhir(Titik titikAkhir){
         this.titikAkhir = titikAkhir;
     }
 
+    // mengembalikan nilai counterGaris
     static int getCounterGaris(){
         return counterGaris;
     }
@@ -53,7 +59,9 @@ public class Garis{
 
     // menghitung gradien dari sebuah garis
     double getGradien(){
-        return (titikAkhir.getOrdinat() - titikAwal.getOrdinat()) / (titikAkhir.getAbsis() - titikAwal.getAbsis());
+        double gradienX = titikAkhir.getOrdinat() - titikAwal.getOrdinat();
+        double gradienY = titikAkhir.getAbsis() - titikAwal.getAbsis();
+        return gradienX / gradienY;
     }
 
     // menghitung titik tengah dari sebuah garis
@@ -75,7 +83,7 @@ public class Garis{
 
     // menampilkan titik awal dan titik akhir garis
     void printGaris(){
-        System.out.println("Titik Awal = (" + titikAwal.getAbsis() + ", " + titikAwal.getOrdinat() + ")");
+        System.out.println("Titik Awal  = (" + titikAwal.getAbsis() + ", " + titikAwal.getOrdinat() + ")");
         System.out.println("Titik Akhir = (" + titikAkhir.getAbsis() + ", " + titikAkhir.getOrdinat() + ")");
     }
 
