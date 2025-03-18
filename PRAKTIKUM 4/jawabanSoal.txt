@@ -1,0 +1,83 @@
+// nama file    : jawabanSoal.txt
+// deskripsi    : berisi jawaban dari pertanyaan yang ada di modul pertemuan ke-4
+// pembuat      : shopia mudjahidah
+// nim          : 24060123120010
+// tanggal      : 13 Maret 2025
+
+Bagian 1 – Simple Inheritance
+Pertanyaan:
+    Apakah konstruktor berparameter pada kelas Persegi dapat 
+    direalisasikan seperti berikut? Mengapa?
+    public Persegi(double sisi, String warna, String border){
+        this.jmlSisi = 4;
+        this.warna = warna;
+        this.border = border;
+        this.sisi = sisi;
+    }
+
+Jawaban:
+    tidak, konstruktor berparameter pada kelas Persegi tidak 
+    dapat direalisasikan karena atribut jmlSisi, warna, dan 
+    border pada kelas BangunDatar masih menggunakan private.
+    private hanya bisa diakses di dalam kelas yang sama. class
+    Persegi adalah subclass dari BangunDatar, tetapi atribut-
+    atribut tersebut bersifat private, maka class Persegi 
+    tidak bisa langsung mengaksesnya.
+
+Bagian 2 – Keyword super
+
+Bagian 3 – Overriding Method
+Pertanyaan:    
+    Coba lakukan overriding pada method printCounterBangunDatar(). 
+    Bagaimana hasilnya?
+
+Jawaban:
+    method printCounterBangunDatar() pada kelas BangunDatar 
+    tidak bisa dioverride di subclass karena memiliki modifier 
+    static. overriding hanya berlaku untuk method non-static, 
+    karena overriding terjadi pada runtime saat objek dibuat, 
+    sementara method static dipanggil berdasarkan kelasnya. akan 
+    terjadi error, karena method static tidak bisa dioverride.
+
+Bagian 4 – Access Modifier Protected
+Pertanyaan:
+    Modifikasilah atribut class BangunDatar dengan access 
+    modifier protected. Setelah modifikasi tersebut, apakah 
+    konstruktor berparameter pada kelas Persegi dapat 
+    direalisasikan seperti berikut? Mengapa?
+    public Persegi(double sisi, String warna, String border){
+        this.jmlSisi = 4;
+        this.warna = warna;
+        this.border = border;
+        this.sisi = sisi;
+    }
+
+Jawaban:
+    yaaa, konstruktor berparameter pada kelas Persegi bisa 
+    direalisasikan dan akan tetap berjalan, karena atribut 
+    jmlSisi, warna, dan border memiliki akses protected dalam 
+    superclass BangunDatar yang berarti subclass Persegi bisa 
+    langsung mengakses dan memodifikasi atribut-atribut tersebut 
+    tanpa harus menggunakan super().
+
+Bagian 5 – Keyword Final
+Pertanyaan:
+1.  Tambahkan keyword final pada kelas BangunDatar. Bagaimana 
+    pengaruhnya terhadap kelas Persegi dan Lingkaran?
+
+Jawaban:
+    jika kita menambahkan final pada kelas BangunDatar, maka 
+    class ini tidak bisa diwariskan oleh class lain seperti 
+    class Persegi dan Lingkaran karena BangunDatar sudah final.
+
+Pertanyaan:
+2.  Hapus kembali keyword final pada kelas BangunDatar, lalu 
+    tambahkan keyword final pada method printInfo() di dalam 
+    kelas BangunDatar. Bagaimana pengaruhnya dengan method 
+    printInfo() pada kelas Persegi dan Lingkaran?
+
+Jawaban:
+    jika kita tidak menambahkan final pada kelas BangunDatar, 
+    tetapi hanya menambahkan final pada method printInfo(), 
+    maka subclass masih bisa dibuat, tetapi method printInfo() 
+    tidak bisa di-override.
