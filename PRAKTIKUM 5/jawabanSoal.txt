@@ -1,0 +1,91 @@
+nama file    : jawabanSoal.txt
+deskripsi    : berisi jawaban dari pertanyaan yang ada di modul pertemuan ke-5
+pembuat      : shopia mudjahidah
+nim          : 24060123120010
+tanggal      : 26 Maret 2025
+
+Bagian 1 - Abstract class
+Pertanyaan:
+3.  Lakukan pula eksperimen dengan menggunakan reference type 
+    BangunDatar saat membuat objek Lingkaran maupun persegi 
+    seperti contoh berikut:
+        BangunDatar B1 = new BangunDatar();
+        BangunDatar P1 = new Persegi(10);
+        Persegi P2 = new Persegi(5);
+        BangunDatar L1 = new Lingkaran(7);
+        Lingkaran L1 = new Lingkaran (14);
+    Dari pembuatan objek seperti contoh di atas. Adakah kode yang 
+    bermasalah pada saat dijalankan?
+
+Jawaban:
+    pada bagian BangunDatar B1 = new BangunDatar(); akan terjadi 
+    error karena BangunDatar adalah abstract class dan tidak dapat
+    membuat objek secara langsung dari class abstract.
+
+Pertanyaan:
+5a.  Apakah method yang dibuat pada langkah nomor 4 dapat digunakan
+    untuk membandingkan objek bangun datar yang berbeda?
+
+Jawaban:
+    ya, method isEqualLuas() dan isEqualKeliling() pada langkah 4 
+    dapat digunakan untuk membandingkan objek dengan bentuk berbeda 
+    seperti Persegi dan Lingkaran. karena method tersebut hanya 
+    membandingkan nilai luas atau keliling, bukan bentuknya, maka 
+    dua objek dengan luas atau keliling yang sama akan dianggap 
+    setara, meskipun bentuknya berbeda.
+
+Pertanyaan:
+5b. Jika BangunDatar tidak dijadikan sebagai abstract class, 
+    dapatkah Anda membuat method isEqualLuas() dan isEqualKeliling() 
+    pada class BangunDatar? Mengapa?
+
+Jawaban:
+    jika BangunDatar bukan abstract class, method getLuas() dan 
+    getKeliling() mungkin tidak diimplementasikan di semua subclass. 
+    hal ini bisa menyebabkan error saat memanggil isEqualLuas() dan 
+    isEqualKeliling(), karena method tersebut memanggil getLuas() 
+    dan getKeliling(). dengan menjadikannya abstract class, setiap 
+    subclass wajib mengimplementasikan method ini, sehingga 
+    perbandingan dapat dilakukan tanpa error.
+
+Pertanyaan:
+5c. Apakah kelebihan saat class BangunDatar dijadikan sebagai 
+    abstract class daripada non-abstract class?
+
+Jawaban:
+    menjadikan class BangunDatar sebagai abstract class punya 
+    banyak kelebihan. salah satunya, kita bisa memastikan setiap 
+    bangun datar seperti class Persegi dan Lingkaran punya cara 
+    sendiri untuk menghitung luas dan kelilingnya, jadi tidak 
+    ada objek tanpa definisi yang jelas. selain itu, dengan 
+    pendekatan ini, kita bisa lebih fleksibel dalam menggunakan 
+    referensi class BangunDatar untuk berbagai bentuk tanpa 
+    kehilangan fungsinya. misalnya saat membandingkan luas atau 
+    keliling dua bangun datar.
+
+Bagian 2 - Interface
+Pertanyaan:
+4.  Lakukan eksperimen pemanggilan method yang telah dibuat dari 
+    IResize pada main method. Bagaimana hasilnya?
+
+Jawaban:
+    hasil dari eksperimen pemanggilan method dari interface IResize
+    akan menunjukkan perubahan ukuran objek Persegi dan Lingkaran 
+    sesuai dengan metode yang dipanggil. pemanggilan method zoomIn() 
+    akan meningkatkan nilai jari-jari lingkaran atau sisi persegi 
+    sebesar 10%, sementara zoomOut() berhasil menguranginya sebesar 
+    10%.
+
+Pertanyaan:
+    Apakah keuntungan saat method zoomIn(), zoomOut(), dan zoom() 
+    dikemas dalam interface IResize dibanding dijadikan sebagai 
+    abstract method dalam class BangunDatar?
+    
+Jawaban:
+    dengan menggunakan interface IResize untuk zoomIn(), zoomOut(),
+    dan zoom() lebih fleksibel dibanding menjadikannya abstract 
+    method di class BangunDatar. interface dapat membuat berbagai 
+    class mengimplementasikan fitur resize tanpa terikat pewarisan. 
+    sebaliknya, jika method ini ada di class BangunDatar, hanya 
+    subclass-nya yang dapat menggunakannya, sehingga akan membatasi 
+    penerapan.
